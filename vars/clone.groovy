@@ -1,3 +1,7 @@
-def call(String url,String branch){
-  git url: "${url}", branch: "{dev}"
+def call(String url, String branch) {
+    git(
+        url: url,
+        branch: branch,
+        credentialsId: 'github-ssh'
+    )
 }
